@@ -135,6 +135,11 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                                        (cond (solarized-degrade     3)
                                              (solarized-broken-srgb 2)
                                              (t                     1))))
+           (((background dark) (type tty) (min-colors 16777216))
+            ,(solarized-face-for-index facespec
+                                       (cond (solarized-degrade     3)
+                                             (solarized-broken-srgb 2)
+                                             (t                     1))))
            (((background dark) (type tty) (min-colors 256))
             ,(solarized-face-for-index facespec
                                        (if (= solarized-termcolors 16) 4 3)))
@@ -148,6 +153,11 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                                              (solarized-broken-srgb 2)
                                              (t                     1))
                                        t))
+           (((background light) (type tty) (min-colors 16777216))
+            ,(solarized-face-for-index facespec
+                                       (cond (solarized-degrade     3)
+                                             (solarized-broken-srgb 2)
+                                             (t                     1))))
            (((background light) (type tty) (min-colors 256))
             ,(solarized-face-for-index facespec
                                        (if (= solarized-termcolors 16) 4 3)
